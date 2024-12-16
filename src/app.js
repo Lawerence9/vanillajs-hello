@@ -11,9 +11,9 @@ let adj = ["great", "big"];
 
 let noun = ["jogger", "racoon"];
 
-let domain = "";
+//let domain = "";
 
-function domainName(str) {
+/*function domainName(str) {
   for (let i = 0; i < pronoun.length; i++) {
     for (let x = 0; x < adj.length; x++) {
       for (let y = 0; y < noun.length; y++) {
@@ -22,9 +22,21 @@ function domainName(str) {
     }
   }
   return domain;
-}
+}*/
 
 window.onload = function() {
   //write your code here
-  console.log(domainName(domain));
+  //console.log(domainName(domain));
+  let domainType = ".com";
+  let domain = "";
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let x = 0; x < adj.length; x++) {
+      for (let y = 0; y < noun.length; y++) {
+        domain += `<li class= "list-group-item">
+        ${pronoun[i]}${adj[x]}${noun[y]}${domainType}</li>
+        `;
+      }
+    }
+  }
+  document.querySelector("#webs").innerHTML = domain;
 };
